@@ -1,0 +1,749 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#"
+     xml:base="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17">
+        <rdfs:isDefinedBy>Umar Memon</rdfs:isDefinedBy>
+        <rdfs:label>Model Validation Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasDataflow -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasDataflow">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositeModel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#DataFlow"/>
+        <rdfs:label xml:lang="en">hasDataflow</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasSource">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#InputVariable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#DataFlow"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SensitivityRelationship"/>
+        <rdfs:label xml:lang="en">hasSource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasSubSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasSubSystem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemComponent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemOfConcern"/>
+        <rdfs:label xml:lang="en">hasSubSystem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasSubmodel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasSubmodel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositeModel"/>
+        <rdfs:label xml:lang="en">hasSubmodel</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasTarget -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasTarget">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#DataFlow"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SensitivityRelationship"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#OutputVariable"/>
+        <rdfs:label xml:lang="en">hasTarget</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasVariable -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#hasVariable">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelVariable"/>
+        <rdfs:label xml:lang="en">hasVariable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isAssessedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isAssessedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositionRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#AcceptanceCriterion"/>
+        <rdfs:label xml:lang="en">isAssessedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isCharacterizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isCharacterizedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+        <rdfs:label xml:lang="en">isCharacterizedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isDefinedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isDefinedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositionRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelVariable"/>
+        <rdfs:label xml:lang="en">isDefinedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isEvaluatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isEvaluatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelVariable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+        <rdfs:label xml:lang="en">isEvaluatedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isMeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isMeasuredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositionRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+        <rdfs:label xml:lang="en">isMeasuredBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isValidatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#isValidatedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#AcceptanceCriterion"/>
+        <rdfs:label xml:lang="en">isValidatedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#models -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#models">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemComponent"/>
+        <rdfs:label xml:lang="en">models</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#comparisonOperator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#comparisonOperator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#AcceptanceCriterion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">comparisonOperator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#dataAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#dataAge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#DataAge"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">dataAge</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#description"/>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#maxRange -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#maxRange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#range"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Ranges"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">maxRange</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#measuredValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#measuredValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Accuracy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">measuredValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#minRange -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#minRange">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#range"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Ranges"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">minRange</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#modelDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#modelDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">modelDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#modelFormula -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#modelFormula">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">modelFormula</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#modelName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#modelName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">modelName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#range -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#range"/>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#refreshRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#refreshRate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#UpdateFrequency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">refreshRate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#resTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#resTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#time"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ResponseTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">resTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#sensitivityCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#sensitivityCoefficient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SensitivityRelationship"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">sensitivityCoefficient</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#stepSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#stepSize">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Quantization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">stepSize</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#systemDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#systemDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">systemDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#systemName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#systemName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">systemName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#thresholdValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#thresholdValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#AcceptanceCriterion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">thresholdValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#time"/>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#totalDelay -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#totalDelay">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#time"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Latency"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">totalDelay</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#unit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#unit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#UnitOfMeasure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">unit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#variableDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#variableDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#description"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelVariable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">variableDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#varialeName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#varialeName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelVariable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">varialeName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#AcceptanceCriterion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#AcceptanceCriterion">
+        <rdfs:comment xml:lang="en">It determines if a requirement has been satisfied or not, invloves threshold values and comparison operators.</rdfs:comment>
+        <rdfs:label xml:lang="en">AcceptanceCriterion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Accuracy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Accuracy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#QualityCharacteristics"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Reliability"/>
+        <rdfs:comment xml:lang="en">The quality or state of model being correct or precise. It is ratio of correct predictions made by a model out of the total number of predictions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Accuracy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Bias -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Bias">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Statistical"/>
+        <rdfs:comment xml:lang="en">An error or preference within a model predictions, leading to skewed or false outcomes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bias</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositeModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositeModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model"/>
+        <rdfs:comment xml:lang="en">A model composed of multiple sub-models or sub-components that work together.</rdfs:comment>
+        <rdfs:label xml:lang="en">CompositeModel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositionRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositionRequirement">
+        <rdfs:comment xml:lang="en">It defines what does a model achieve. It consists of multiple interconnected requirements and their acceptance criteria.</rdfs:comment>
+        <rdfs:label xml:lang="en">CompositionRequirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#DataAge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#DataAge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Temporal"/>
+        <rdfs:comment xml:lang="en">The time that is passed since data was collected or last updated.</rdfs:comment>
+        <rdfs:label xml:lang="en">DataAge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#DataFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#DataFlow">
+        <rdfs:comment xml:lang="en">Movement of data through the system or model.</rdfs:comment>
+        <rdfs:label xml:lang="en">DataFlow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#InputVariable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#InputVariable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelVariable"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#OutputVariable"/>
+        <rdfs:comment xml:lang="en">Variable or number of variables that are used to make a prediction or generate an output.</rdfs:comment>
+        <rdfs:label xml:lang="en">InputVariable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Latency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Latency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Temporal"/>
+        <rdfs:comment xml:lang="en">Delay between input and the start of result generation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Latency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model">
+        <rdfs:comment xml:lang="en">A representation of a system, process, or phenomenon that can be evaluated against requirements and has measurable characteristics.</rdfs:comment>
+        <rdfs:label xml:lang="en">Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics">
+        <rdfs:comment xml:lang="en">Measurable properties of a model that show its performance, quality, or behavior in specific domains.</rdfs:comment>
+        <rdfs:label xml:lang="en">ModelCharacteristics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelVariable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelVariable">
+        <rdfs:comment xml:lang="en">A variable within a model that can be measured, monitored, or controlled.</rdfs:comment>
+        <rdfs:label xml:lang="en">ModelVariable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#OutputVariable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#OutputVariable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelVariable"/>
+        <rdfs:comment xml:lang="en">The output generated by input variables or the prediction.</rdfs:comment>
+        <rdfs:label xml:lang="en">OutputVariable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#QualityCharacteristics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#QualityCharacteristics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+        <rdfs:comment xml:lang="en">Define a models&apos;s performance.</rdfs:comment>
+        <rdfs:label xml:lang="en">QualityCharacteristics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Quantization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Quantization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+        <rdfs:comment xml:lang="en">The process of converting inputs/outputs to a discrete set of values.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quantization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Ranges -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Ranges">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+        <rdfs:comment xml:lang="en">The set of values that a represent outputs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ranges</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Reliability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Reliability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#QualityCharacteristics"/>
+        <rdfs:comment xml:lang="en">A model&apos;s ability to continuously give accurate outputs for different datasets.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reliability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ResponseTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ResponseTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Temporal"/>
+        <rdfs:comment xml:lang="en">Time taken by model to predict or generate response.</rdfs:comment>
+        <rdfs:label xml:lang="en">ResponseTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SensitivityRelationship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SensitivityRelationship">
+        <rdfs:comment xml:lang="en">A model&apos;s ability to identify true positive among all actual positive data points.</rdfs:comment>
+        <rdfs:label xml:lang="en">SensitivityRelationship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Statistical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Statistical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+        <rdfs:comment xml:lang="en">The statistical characteristics refer to the numerical properties of data that are used to train, evaluate, and interpret models. I.e. mean, median, mode, std.</rdfs:comment>
+        <rdfs:label xml:lang="en">Statistical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemAndModeling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemAndModeling">
+        <rdfs:comment xml:lang="en">The process of developing a prediction system using algorithms and data.</rdfs:comment>
+        <rdfs:label xml:lang="en">SystemAndModeling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemComponent">
+        <rdfs:comment xml:lang="en">A part of a larger system that participates in model execution and can be monitored for performance characteristics.</rdfs:comment>
+        <rdfs:label xml:lang="en">SystemComponent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemOfConcern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemOfConcern">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemComponent"/>
+        <rdfs:comment xml:lang="en">The overall system being modeled or analyzed, composed of multiple components.</rdfs:comment>
+        <rdfs:label xml:lang="en">SystemOfConcern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Temporal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Temporal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+        <rdfs:comment xml:lang="en">Characteristics of model that are related to time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#UnitOfMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#UnitOfMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+        <rdfs:comment xml:lang="en">Unit time taken to predict/generate output.</rdfs:comment>
+        <rdfs:label xml:lang="en">UnitOfMeasure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#UpdateFrequency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#UpdateFrequency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Temporal"/>
+        <rdfs:comment xml:lang="en">Change in frequency.</rdfs:comment>
+        <rdfs:label xml:lang="en">UpdateFrequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Variance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Variance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Statistical"/>
+        <rdfs:comment xml:lang="en">It is a model&apos;s sensitivity to changes in the training data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Variance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#AcceptanceCriterion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositionRequirement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#DataFlow"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelVariable"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SensitivityRelationship"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemAndModeling"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemComponent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#AcceptanceCriterion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositionRequirement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#DataFlow"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelCharacteristics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ModelVariable"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SensitivityRelationship"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemAndModeling"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#CompositeModel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Model"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#SystemOfConcern"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#DataAge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Latency"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#ResponseTime"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#UpdateFrequency"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#QualityCharacteristics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Quantization"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Ranges"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Statistical"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#Temporal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#UnitOfMeasure"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
