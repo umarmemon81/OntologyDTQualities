@@ -1,0 +1,3820 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/92307/ontologies/2025/4/model-validation-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/92307/ontologies/2025/4/model-validation-ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/92307/ontologies/2025/4/model-validation-ontology"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="untitled-ontology-17" IRI="http://www.semanticweb.org/92307/ontologies/2025/4/untitled-ontology-17#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>The Model Validation Ontology is aimed at formally describing the structure and reasoning of quality-aware model composition in intelligent systems. It captures essential concepts like models, inputs, and outputs of the models, the quality requirements such as accuracy and latency, and the selection criteria for appropriate models to accomplish a certain goal. This ontology facilitates automated reasoning about whether a collection of models satisfies given performance requirements for a particular task. It facilitates situations where several models are combined depending on their input-output dependencies and their ability to provide accuracy and latency requirements.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <Literal>Umar Memon</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Model Validation Ontology</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:AcceptanceCriterion"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:Accuracy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:Bias"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositeModel"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:DataAge"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:DataFlow"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:Latency"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelVariable"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:OutputVariable"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:QualityCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:Quantization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:Ranges"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:Reliability"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:ResponseTime"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:SensitivityRelationship"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:Statistical"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemOfConcern"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:Temporal"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:UnitOfMeasure"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:UpdateFrequency"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="untitled-ontology-17:Variance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInputQuality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOutputAccuracy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOutputQualities"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:constrainsModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasDataflow"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasOutputVariable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasSource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasSubSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasSubmodel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasTarget"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isAssessedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isCharacterizedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isDefinedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isEvaluatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isMeasuredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isValidatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:models"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAccuracyOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAccuracyThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAccuracyUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAccuracyValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInputQuality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLatencyOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLatencyThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLatencyUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLatencyValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOutputAccuracyOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOutputAccuracyThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOutputAccuracyUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOutputAccuracyValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOutputGoal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOutputLatencyOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOutputLatencyThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOutputLatencyUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOutputLatencyValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOutputQuality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#inputALatencyValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#inputAccuracyValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#inputLatencyOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#inputLatencyUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:comparisonOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:dataAge"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasMetricName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasOutputUnitOfMeasure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasRequiredValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasThreshold"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:maxRange"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:measuredValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:minRange"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:modelDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:modelName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:range"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:refreshRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:resTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:sensitivityCoefficient"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:stepSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:systemDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:systemName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:thresholdValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:time"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:totalDelay"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:unit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:variableDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:varialeName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AccuracyRequirement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LatencyRequirement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OutputGoalRequirement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m1_Predicted_time_to_fill_Tank_C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m2_Predicted_time_to_fill_Tank_C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m3_flow_rate_pipe_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m4_flow_rate_pipe_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m5_flow_rate_pipe_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:AcceptanceCriterion"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:Accuracy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:QualityCharacteristics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:Bias"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Statistical"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositeModel"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:DataAge"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Temporal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:DataFlow"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelVariable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:Latency"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Temporal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelVariable"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:OutputVariable"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelVariable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:QualityCharacteristics"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:Quantization"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:Ranges"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:Reliability"/>
+        <Class abbreviatedIRI="untitled-ontology-17:QualityCharacteristics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:ResponseTime"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Temporal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:SensitivityRelationship"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:Statistical"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemComponent"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemOfConcern"/>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemComponent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:Temporal"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:UnitOfMeasure"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:UpdateFrequency"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Temporal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="untitled-ontology-17:Variance"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Statistical"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="untitled-ontology-17:Accuracy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Reliability"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositeModel"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemComponent"/>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemOfConcern"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="untitled-ontology-17:DataAge"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Latency"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ResponseTime"/>
+        <Class abbreviatedIRI="untitled-ontology-17:UpdateFrequency"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <Class abbreviatedIRI="untitled-ontology-17:OutputVariable"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="untitled-ontology-17:QualityCharacteristics"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Quantization"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Ranges"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Statistical"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Temporal"/>
+        <Class abbreviatedIRI="untitled-ontology-17:UnitOfMeasure"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+        <NamedIndividual IRI="#AccuracyRequirement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+        <NamedIndividual IRI="#LatencyRequirement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+        <NamedIndividual IRI="#OutputGoalRequirement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+        <NamedIndividual IRI="#m1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:OutputVariable"/>
+        <NamedIndividual IRI="#m1_Predicted_time_to_fill_Tank_C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+        <NamedIndividual IRI="#m2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:OutputVariable"/>
+        <NamedIndividual IRI="#m2_Predicted_time_to_fill_Tank_C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+        <NamedIndividual IRI="#m3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:OutputVariable"/>
+        <NamedIndividual IRI="#m3_flow_rate_pipe_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+        <NamedIndividual IRI="#m4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:OutputVariable"/>
+        <NamedIndividual IRI="#m4_flow_rate_pipe_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+        <NamedIndividual IRI="#m5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:OutputVariable"/>
+        <NamedIndividual IRI="#m5_flow_rate_pipe_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m1"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m1"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m1"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m1"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasOutputVariable"/>
+        <NamedIndividual IRI="#m1"/>
+        <NamedIndividual IRI="#m1_Predicted_time_to_fill_Tank_C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m2"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m2"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m2"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m2"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasOutputVariable"/>
+        <NamedIndividual IRI="#m2"/>
+        <NamedIndividual IRI="#m2_Predicted_time_to_fill_Tank_C"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m3"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m3"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasOutputVariable"/>
+        <NamedIndividual IRI="#m3"/>
+        <NamedIndividual IRI="#m3_flow_rate_pipe_a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m4"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m4"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasOutputVariable"/>
+        <NamedIndividual IRI="#m4"/>
+        <NamedIndividual IRI="#m4_flow_rate_pipe_b"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m5"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <NamedIndividual IRI="#m5"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasOutputVariable"/>
+        <NamedIndividual IRI="#m5"/>
+        <NamedIndividual IRI="#m5_flow_rate_pipe_b"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAccuracyOperator"/>
+        <NamedIndividual IRI="#AccuracyRequirement"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAccuracyThreshold"/>
+        <NamedIndividual IRI="#AccuracyRequirement"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAccuracyUnit"/>
+        <NamedIndividual IRI="#AccuracyRequirement"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAccuracyValue"/>
+        <NamedIndividual IRI="#AccuracyRequirement"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLatencyOperator"/>
+        <NamedIndividual IRI="#AccuracyRequirement"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLatencyThreshold"/>
+        <NamedIndividual IRI="#AccuracyRequirement"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">450</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLatencyUnit"/>
+        <NamedIndividual IRI="#AccuracyRequirement"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLatencyValue"/>
+        <NamedIndividual IRI="#AccuracyRequirement"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">400</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasMetricName"/>
+        <NamedIndividual IRI="#AccuracyRequirement"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAccuracyOperator"/>
+        <NamedIndividual IRI="#LatencyRequirement"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAccuracyThreshold"/>
+        <NamedIndividual IRI="#LatencyRequirement"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAccuracyUnit"/>
+        <NamedIndividual IRI="#LatencyRequirement"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAccuracyValue"/>
+        <NamedIndividual IRI="#LatencyRequirement"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLatencyOperator"/>
+        <NamedIndividual IRI="#LatencyRequirement"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLatencyThreshold"/>
+        <NamedIndividual IRI="#LatencyRequirement"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">450</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLatencyUnit"/>
+        <NamedIndividual IRI="#LatencyRequirement"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLatencyValue"/>
+        <NamedIndividual IRI="#LatencyRequirement"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">400</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasMetricName"/>
+        <NamedIndividual IRI="#LatencyRequirement"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputGoal"/>
+        <NamedIndividual IRI="#OutputGoalRequirement"/>
+        <Literal>Predicted_time_to_fill_Tank_C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">94</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">94</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#current_tank_level_Tank_C"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyOperator"/>
+        <NamedIndividual IRI="#m1"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">95.75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyUnit"/>
+        <NamedIndividual IRI="#m1"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyValue"/>
+        <NamedIndividual IRI="#m1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">95.75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyOperator"/>
+        <NamedIndividual IRI="#m1"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyThreshold"/>
+        <NamedIndividual IRI="#m1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">400</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyUnit"/>
+        <NamedIndividual IRI="#m1"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyValue"/>
+        <NamedIndividual IRI="#m1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">400</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <NamedIndividual IRI="#m1"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <NamedIndividual IRI="#m1"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">94</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">94</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m1_current_tank_level_Tank_C"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_a"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m1_flow_rate_pipe_b"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">98</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">98</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m1_tank_dimension_Tank_C"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyOperator"/>
+        <NamedIndividual IRI="#m2"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">92.75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyUnit"/>
+        <NamedIndividual IRI="#m2"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyValue"/>
+        <NamedIndividual IRI="#m2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">92.75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyOperator"/>
+        <NamedIndividual IRI="#m2"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyThreshold"/>
+        <NamedIndividual IRI="#m2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyUnit"/>
+        <NamedIndividual IRI="#m2"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyValue"/>
+        <NamedIndividual IRI="#m2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <NamedIndividual IRI="#m2"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <NamedIndividual IRI="#m2"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">93</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">140</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">93</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">140</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m2_current_tank_level_Tank_C"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">94</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">94</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_a"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">92</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">92</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m2_flow_rate_pipe_b"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">92</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">92</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m2_tank_dimension_Tank_C"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyOperator"/>
+        <NamedIndividual IRI="#m3"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyUnit"/>
+        <NamedIndividual IRI="#m3"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyValue"/>
+        <NamedIndividual IRI="#m3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyOperator"/>
+        <NamedIndividual IRI="#m3"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyThreshold"/>
+        <NamedIndividual IRI="#m3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyUnit"/>
+        <NamedIndividual IRI="#m3"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyValue"/>
+        <NamedIndividual IRI="#m3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <NamedIndividual IRI="#m3"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <NamedIndividual IRI="#m3"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m3_pipe_diameter_pipe_a"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m3_valve_position_pipe_a"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyOperator"/>
+        <NamedIndividual IRI="#m4"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyUnit"/>
+        <NamedIndividual IRI="#m4"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyValue"/>
+        <NamedIndividual IRI="#m4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyOperator"/>
+        <NamedIndividual IRI="#m4"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyThreshold"/>
+        <NamedIndividual IRI="#m4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">190</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyUnit"/>
+        <NamedIndividual IRI="#m4"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyValue"/>
+        <NamedIndividual IRI="#m4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">180</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <NamedIndividual IRI="#m4"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <NamedIndividual IRI="#m4"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">110</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m4_pipe_diameter_b"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m4_valve_position_pipe_b"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyOperator"/>
+        <NamedIndividual IRI="#m5"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyUnit"/>
+        <NamedIndividual IRI="#m5"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputAccuracyValue"/>
+        <NamedIndividual IRI="#m5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyOperator"/>
+        <NamedIndividual IRI="#m5"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyThreshold"/>
+        <NamedIndividual IRI="#m5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">130</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyUnit"/>
+        <NamedIndividual IRI="#m5"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputLatencyValue"/>
+        <NamedIndividual IRI="#m5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <NamedIndividual IRI="#m5"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <NamedIndividual IRI="#m5"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">59</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">92</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">93</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m5_pipe_diameter_b"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">53</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">58</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#m5_valve_position_pipe_b"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#pipe_diameter_b"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#pipe_diameter_pipe_a"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">98</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">98</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#tank_dimension_Tank_C"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#valve_position_pipe_a"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+        <Literal>Accuracy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInputQuality"/>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+        <Literal>Latency</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+        <Literal>GreaterThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+        <Literal>%</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+        <Literal>LessThanOrEqual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <NamedIndividual IRI="#valve_position_pipe_b"/>
+        <Literal>milliseconds</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasInputQuality"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOutputAccuracy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasSubSystem"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasSubmodel"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasTarget"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isAssessedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isCharacterizedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isDefinedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isEvaluatedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isMeasuredBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInputQuality"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOutputAccuracy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:OutputVariable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOutputQualities"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:constrainsModel"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasDataflow"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositeModel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasOutputVariable"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasSource"/>
+        <Class abbreviatedIRI="untitled-ontology-17:DataFlow"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasSubSystem"/>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemComponent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasSubmodel"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasTarget"/>
+        <Class abbreviatedIRI="untitled-ontology-17:DataFlow"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isAssessedBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isCharacterizedBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isDefinedBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isEvaluatedBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelVariable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isMeasuredBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isValidatedBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:models"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInputQuality"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Accuracy"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOutputAccuracy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Accuracy"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOutputQualities"/>
+        <Class abbreviatedIRI="untitled-ontology-17:QualityCharacteristics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:constrainsModel"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasDataflow"/>
+        <Class abbreviatedIRI="untitled-ontology-17:DataFlow"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasInputVariable"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasOutputVariable"/>
+        <Class abbreviatedIRI="untitled-ontology-17:OutputVariable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasSource"/>
+        <Class abbreviatedIRI="untitled-ontology-17:OutputVariable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasSubSystem"/>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemOfConcern"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasSubmodel"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositeModel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:hasTarget"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isAssessedBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:AcceptanceCriterion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isCharacterizedBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isDefinedBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelVariable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isEvaluatedBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isMeasuredBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelCharacteristics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:isValidatedBy"/>
+        <Class abbreviatedIRI="untitled-ontology-17:AcceptanceCriterion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="untitled-ontology-17:models"/>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemComponent"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAccuracyOperator"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAccuracyThreshold"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAccuracyUnit"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAccuracyValue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLatencyOperator"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLatencyThreshold"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLatencyUnit"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLatencyValue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOutputAccuracyOperator"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOutputAccuracyThreshold"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOutputAccuracyUnit"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOutputAccuracyValue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOutputLatencyOperator"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOutputLatencyThreshold"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOutputLatencyUnit"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOutputLatencyValue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:comparisonOperator"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:description"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasMetricName"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasOperator"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasOutputUnitOfMeasure"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasRequiredValue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasThreshold"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasUnit"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:maxRange"/>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:range"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:measuredValue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:minRange"/>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:range"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:modelDescription"/>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:description"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:modelName"/>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:name"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:name"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:range"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:refreshRate"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:resTime"/>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:time"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:sensitivityCoefficient"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:stepSize"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:systemDescription"/>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:description"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:systemName"/>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:name"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:thresholdValue"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:time"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:totalDelay"/>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:time"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:unit"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:variableDescription"/>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:description"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:varialeName"/>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:name"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAccuracyOperator"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAccuracyThreshold"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAccuracyUnit"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAccuracyValue"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInputQuality"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLatencyOperator"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLatencyThreshold"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLatencyUnit"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLatencyValue"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutputAccuracyOperator"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutputAccuracyThreshold"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutputAccuracyUnit"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutputAccuracyValue"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutputGoal"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutputLatencyOperator"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutputLatencyThreshold"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutputLatencyUnit"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutputLatencyValue"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#inputAccuracyOperator"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <Class abbreviatedIRI="untitled-ontology-17:InputVariable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:comparisonOperator"/>
+        <Class abbreviatedIRI="untitled-ontology-17:AcceptanceCriterion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:dataAge"/>
+        <Class abbreviatedIRI="untitled-ontology-17:DataAge"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasMetricName"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasOperator"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasOutputUnitOfMeasure"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasRequiredValue"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasThreshold"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasUnit"/>
+        <Class abbreviatedIRI="untitled-ontology-17:CompositionRequirement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:maxRange"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Ranges"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:measuredValue"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Accuracy"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:minRange"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Ranges"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:modelDescription"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:modelName"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:refreshRate"/>
+        <Class abbreviatedIRI="untitled-ontology-17:UpdateFrequency"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:resTime"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ResponseTime"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:sensitivityCoefficient"/>
+        <Class abbreviatedIRI="untitled-ontology-17:SensitivityRelationship"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:stepSize"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Quantization"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:systemDescription"/>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemComponent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:systemName"/>
+        <Class abbreviatedIRI="untitled-ontology-17:SystemComponent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:thresholdValue"/>
+        <Class abbreviatedIRI="untitled-ontology-17:AcceptanceCriterion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:totalDelay"/>
+        <Class abbreviatedIRI="untitled-ontology-17:Latency"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:unit"/>
+        <Class abbreviatedIRI="untitled-ontology-17:UnitOfMeasure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:variableDescription"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelVariable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:varialeName"/>
+        <Class abbreviatedIRI="untitled-ontology-17:ModelVariable"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAccuracyOperator"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAccuracyThreshold"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAccuracyUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAccuracyValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasInputQuality"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLatencyOperator"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLatencyThreshold"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLatencyUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLatencyValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOutputAccuracyOperator"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOutputAccuracyThreshold"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOutputAccuracyUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOutputAccuracyValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOutputGoal"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOutputLatencyOperator"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOutputLatencyThreshold"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOutputLatencyUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOutputLatencyValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOutputQuality"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#inputALatencyValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#inputAccuracyThreshold"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#inputAccuracyUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#inputAccuracyValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#inputLatencyOperator"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#inputLatencyThreshold"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#inputLatencyUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:comparisonOperator"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:dataAge"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasMetricName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasOperator"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasOutputUnitOfMeasure"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasRequiredValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasThreshold"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:hasUnit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:maxRange"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:measuredValue"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:minRange"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:modelDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:modelName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:refreshRate"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:resTime"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:sensitivityCoefficient"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:stepSize"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:systemDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:systemName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:thresholdValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:totalDelay"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:unit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:variableDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="untitled-ontology-17:varialeName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000015</IRI>
+        <Literal>083-BFO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000015</IRI>
+        <Literal xml:lang="en">process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000015</IRI>
+        <Literal xml:lang="en">event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000015</IRI>
+        <Literal xml:lang="en">(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000015</IRI>
+        <Literal xml:lang="en">An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000019</IRI>
+        <Literal>055-BFO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000019</IRI>
+        <Literal xml:lang="en">quality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000019</IRI>
+        <Literal xml:lang="en">(Elucidation) A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000019</IRI>
+        <Literal xml:lang="en">The colour of a tomato; the ambient temperature of this portion of air; the length of the circumference of your waist; the shape of your nose; the shape of your nostril; the mass of this piece of gold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000030</IRI>
+        <Literal>024-BFO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000030</IRI>
+        <Literal xml:lang="en">object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000030</IRI>
+        <Literal xml:lang="en">(Elucidation) An object is a material entity which manifests causal unity &amp; is of a type instances of which are maximal relative to the sort of causal unity manifested</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000030</IRI>
+        <Literal xml:lang="en">An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000030</IRI>
+        <Literal xml:lang="en">A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User Guide</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000031</IRI>
+        <Literal>074-BFO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000031</IRI>
+        <Literal xml:lang="en">generically dependent continuant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000031</IRI>
+        <Literal xml:lang="en">g-dependent continuant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000031</IRI>
+        <Literal xml:lang="en">(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000031</IRI>
+        <Literal xml:lang="en">The pdf file on your laptop; the pdf file that is a copy thereof on my laptop; the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule; the content that is shared by a string of dots and dashes written on a page and the transmitted Morse code signal; the content of a sentence; an engineering blueprint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000145</IRI>
+        <Literal>057-BFO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000145</IRI>
+        <Literal xml:lang="en">relational quality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000145</IRI>
+        <Literal xml:lang="en">b is a relational quality =Def b is a quality &amp; there exists c and d such that c and d are not identical &amp; b specifically depends on c &amp; b specifically depends on d</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>http://purl.obolibrary.org/obo/BFO_0000145</IRI>
+        <Literal xml:lang="en">A marriage bond; an instance of love; an obligation between one person and another</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AccuracyRequirement</IRI>
+        <Literal>AccuracyRequirement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LatencyRequirement</IRI>
+        <Literal>LatencyRequirement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OutputGoalRequirement</IRI>
+        <Literal>OutputGoalRequirement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#current_tank_level_Tank_C</IRI>
+        <Literal>current_tank_level_Tank_C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAccuracyOperator</IRI>
+        <Literal>hasAccuracyOperator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAccuracyThreshold</IRI>
+        <Literal>hasAccuracyThreshold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAccuracyUnit</IRI>
+        <Literal>hasAccuracyUnit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAccuracyValue</IRI>
+        <Literal>hasAccuracyValue
+hasOperator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasInputQuality</IRI>
+        <Literal>hasInputQuality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLatencyOperator</IRI>
+        <Literal>hasLatencyOperator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLatencyThreshold</IRI>
+        <Literal>hasLatencyThreshold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLatencyUnit</IRI>
+        <Literal>hasLatencyUnit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLatencyValue</IRI>
+        <Literal>hasLatencyValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOutputAccuracyOperator</IRI>
+        <Literal>hasOutputAccuracyOperator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOutputAccuracyThreshold</IRI>
+        <Literal>hasOutputAccuracyThreshold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOutputAccuracyUnit</IRI>
+        <Literal>hasOutputAccuracyUnit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOutputAccuracyValue</IRI>
+        <Literal>hasOutputAccuracyValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOutputGoal</IRI>
+        <Literal>hasOutputGoal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOutputLatencyOperator</IRI>
+        <Literal>hasOutputLatencyOperator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOutputLatencyThreshold</IRI>
+        <Literal>hasOutputLatencyThreshold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOutputLatencyUnit</IRI>
+        <Literal>hasOutputLatencyUnit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOutputLatencyValue</IRI>
+        <Literal>hasOutputLatencyValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOutputQuality</IRI>
+        <Literal>hasOutputQuality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#inputALatencyValue</IRI>
+        <Literal>inputALatencyValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#inputAccuracyOperator</IRI>
+        <Literal>inputAccuracyOperator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#inputAccuracyThreshold</IRI>
+        <Literal>inputAccuracyThreshold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#inputAccuracyUnit</IRI>
+        <Literal>inputAccuracyUnit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#inputAccuracyValue</IRI>
+        <Literal>inputAccuracyValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#inputLatencyOperator</IRI>
+        <Literal>inputLatencyOperator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#inputLatencyThreshold</IRI>
+        <Literal>inputLatencyThreshold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#inputLatencyUnit</IRI>
+        <Literal>inputLatencyUnit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m1</IRI>
+        <Literal>m1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m1_Predicted_time_to_fill_Tank_C</IRI>
+        <Literal>m1_Predicted_time_to_fill_Tank_C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m1_current_tank_level_Tank_C</IRI>
+        <Literal>m1_current_tank_level_Tank_C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m1_flow_rate_pipe_a</IRI>
+        <Literal>m1_flow_rate_pipe_a</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m1_flow_rate_pipe_b</IRI>
+        <Literal>m1_flow_rate_pipe_b</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m1_tank_dimension_Tank_C</IRI>
+        <Literal>m1_tank_dimension_Tank_C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m2</IRI>
+        <Literal>m2</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m2_Predicted_time_to_fill_Tank_C</IRI>
+        <Literal>m2_Predicted_time_to_fill_Tank_C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m2_current_tank_level_Tank_C</IRI>
+        <Literal>m2_current_tank_level_Tank_C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m2_flow_rate_pipe_a</IRI>
+        <Literal>m2_flow_rate_pipe_a</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m2_flow_rate_pipe_b</IRI>
+        <Literal>m2_flow_rate_pipe_b</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m2_tank_dimension_Tank_C</IRI>
+        <Literal>m2_tank_dimension_Tank_C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m3</IRI>
+        <Literal>m3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m3_flow_rate_pipe_a</IRI>
+        <Literal>m3_flow_rate_pipe_a</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m3_pipe_diameter_pipe_a</IRI>
+        <Literal>m3_pipe_diameter_pipe_a</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m3_valve_position_pipe_a</IRI>
+        <Literal>m3_valve_position_pipe_a</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m4</IRI>
+        <Literal>m4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m4_flow_rate_pipe_b</IRI>
+        <Literal>m4_flow_rate_pipe_b</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m4_pipe_diameter_b</IRI>
+        <Literal>m4_pipe_diameter_b</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m4_valve_position_pipe_b</IRI>
+        <Literal>m4_valve_position_pipe_b</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m5</IRI>
+        <Literal>m5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m5_flow_rate_pipe_b</IRI>
+        <Literal>m5_flow_rate_pipe_b</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m5_pipe_diameter_b</IRI>
+        <Literal>m5_pipe_diameter_b</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#m5_valve_position_pipe_b</IRI>
+        <Literal>m5_valve_position_pipe_b</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#pipe_diameter_b</IRI>
+        <Literal>pipe_diameter_b</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#pipe_diameter_pipe_a</IRI>
+        <Literal>pipe_diameter_pipe_a</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#tank_dimension_Tank_C</IRI>
+        <Literal>tank_dimension_Tank_C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#valve_position_pipe_a</IRI>
+        <Literal>valve_position_pipe_a</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#valve_position_pipe_b</IRI>
+        <Literal>valve_position_pipe_b</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:AcceptanceCriterion</AbbreviatedIRI>
+        <Literal xml:lang="en">It determines if a requirement has been satisfied or not, invloves threshold values and comparison operators.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:AcceptanceCriterion</AbbreviatedIRI>
+        <Literal xml:lang="en">AcceptanceCriterion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:Accuracy</AbbreviatedIRI>
+        <Literal xml:lang="en">The quality or state of model being correct or precise. It is ratio of correct predictions made by a model out of the total number of predictions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:Accuracy</AbbreviatedIRI>
+        <Literal xml:lang="en">Accuracy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:Bias</AbbreviatedIRI>
+        <Literal xml:lang="en">An error or preference within a model predictions, leading to skewed or false outcomes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:Bias</AbbreviatedIRI>
+        <Literal xml:lang="en">Bias</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:CompositeModel</AbbreviatedIRI>
+        <Literal xml:lang="en">A model composed of multiple sub-models or sub-components that work together.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:CompositeModel</AbbreviatedIRI>
+        <Literal xml:lang="en">CompositeModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:CompositionRequirement</AbbreviatedIRI>
+        <Literal xml:lang="en">It defines what does a model achieve. It consists of multiple interconnected requirements and their acceptance criteria.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:CompositionRequirement</AbbreviatedIRI>
+        <Literal xml:lang="en">CompositionRequirement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:DataAge</AbbreviatedIRI>
+        <Literal xml:lang="en">The time that is passed since data was collected or last updated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:DataAge</AbbreviatedIRI>
+        <Literal xml:lang="en">DataAge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:DataFlow</AbbreviatedIRI>
+        <Literal xml:lang="en">Movement of data through the system or model.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:DataFlow</AbbreviatedIRI>
+        <Literal xml:lang="en">DataFlow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:InputVariable</AbbreviatedIRI>
+        <Literal xml:lang="en">Variable or number of variables that are used to make a prediction or generate an output.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:InputVariable</AbbreviatedIRI>
+        <Literal xml:lang="en">InputVariable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:Latency</AbbreviatedIRI>
+        <Literal xml:lang="en">Delay between input and the start of result generation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:Latency</AbbreviatedIRI>
+        <Literal xml:lang="en">Latency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:Model</AbbreviatedIRI>
+        <Literal xml:lang="en">A representation of a system, process, or phenomenon that can be evaluated against requirements and has measurable characteristics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:Model</AbbreviatedIRI>
+        <Literal xml:lang="en">Model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:ModelCharacteristics</AbbreviatedIRI>
+        <Literal xml:lang="en">Measurable properties of a model that show its performance, quality, or behavior in specific domains.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:ModelCharacteristics</AbbreviatedIRI>
+        <Literal xml:lang="en">ModelCharacteristics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:ModelVariable</AbbreviatedIRI>
+        <Literal xml:lang="en">A variable within a model that can be measured, monitored, or controlled.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:ModelVariable</AbbreviatedIRI>
+        <Literal xml:lang="en">ModelVariable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:OutputVariable</AbbreviatedIRI>
+        <Literal xml:lang="en">The output generated by input variables or the prediction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:OutputVariable</AbbreviatedIRI>
+        <Literal xml:lang="en">OutputVariable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:QualityCharacteristics</AbbreviatedIRI>
+        <Literal xml:lang="en">Define a models&apos;s performance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:QualityCharacteristics</AbbreviatedIRI>
+        <Literal xml:lang="en">QualityCharacteristics</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:Quantization</AbbreviatedIRI>
+        <Literal xml:lang="en">The process of converting inputs/outputs to a discrete set of values.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:Quantization</AbbreviatedIRI>
+        <Literal xml:lang="en">Quantization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:Ranges</AbbreviatedIRI>
+        <Literal xml:lang="en">The set of values that a represent outputs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:Ranges</AbbreviatedIRI>
+        <Literal xml:lang="en">Ranges</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:Reliability</AbbreviatedIRI>
+        <Literal xml:lang="en">A model&apos;s ability to continuously give accurate outputs for different datasets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:Reliability</AbbreviatedIRI>
+        <Literal xml:lang="en">Reliability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:ResponseTime</AbbreviatedIRI>
+        <Literal xml:lang="en">Time taken by model to predict or generate response.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:ResponseTime</AbbreviatedIRI>
+        <Literal xml:lang="en">ResponseTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:SensitivityRelationship</AbbreviatedIRI>
+        <Literal xml:lang="en">A model&apos;s ability to identify true positive among all actual positive data points.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:SensitivityRelationship</AbbreviatedIRI>
+        <Literal xml:lang="en">SensitivityRelationship</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:Statistical</AbbreviatedIRI>
+        <Literal xml:lang="en">The statistical characteristics refer to the numerical properties of data that are used to train, evaluate, and interpret models. I.e. mean, median, mode, std.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:Statistical</AbbreviatedIRI>
+        <Literal xml:lang="en">Statistical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:SystemComponent</AbbreviatedIRI>
+        <Literal xml:lang="en">A part of a larger system that participates in model execution and can be monitored for performance characteristics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:SystemComponent</AbbreviatedIRI>
+        <Literal xml:lang="en">SystemComponent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:SystemOfConcern</AbbreviatedIRI>
+        <Literal xml:lang="en">The overall system being modeled or analyzed, composed of multiple components.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:SystemOfConcern</AbbreviatedIRI>
+        <Literal xml:lang="en">SystemOfConcern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:Temporal</AbbreviatedIRI>
+        <Literal xml:lang="en">Characteristics of model that are related to time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:Temporal</AbbreviatedIRI>
+        <Literal xml:lang="en">Temporal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:UnitOfMeasure</AbbreviatedIRI>
+        <Literal xml:lang="en">Unit time taken to predict/generate output.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:UnitOfMeasure</AbbreviatedIRI>
+        <Literal xml:lang="en">UnitOfMeasure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:UpdateFrequency</AbbreviatedIRI>
+        <Literal xml:lang="en">Change in frequency.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:UpdateFrequency</AbbreviatedIRI>
+        <Literal xml:lang="en">UpdateFrequency</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>untitled-ontology-17:Variance</AbbreviatedIRI>
+        <Literal xml:lang="en">It is a model&apos;s sensitivity to changes in the training data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:Variance</AbbreviatedIRI>
+        <Literal xml:lang="en">Variance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:comparisonOperator</AbbreviatedIRI>
+        <Literal xml:lang="en">comparisonOperator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:dataAge</AbbreviatedIRI>
+        <Literal xml:lang="en">dataAge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:hasDataflow</AbbreviatedIRI>
+        <Literal xml:lang="en">hasDataflow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:hasMetricName</AbbreviatedIRI>
+        <Literal>hasMetricName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:hasOperator</AbbreviatedIRI>
+        <Literal>hasOperator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:hasOutputUnitOfMeasure</AbbreviatedIRI>
+        <Literal>hasOutputUnitOfMeasure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:hasRequiredValue</AbbreviatedIRI>
+        <Literal>hasRequiredValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:hasSource</AbbreviatedIRI>
+        <Literal xml:lang="en">hasSource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:hasSubSystem</AbbreviatedIRI>
+        <Literal xml:lang="en">hasSubSystem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:hasSubmodel</AbbreviatedIRI>
+        <Literal xml:lang="en">hasSubmodel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:hasTarget</AbbreviatedIRI>
+        <Literal xml:lang="en">hasTarget</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:hasThreshold</AbbreviatedIRI>
+        <Literal>hasThreshold</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:hasUnit</AbbreviatedIRI>
+        <Literal>hasUnit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:isAssessedBy</AbbreviatedIRI>
+        <Literal xml:lang="en">isAssessedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:isCharacterizedBy</AbbreviatedIRI>
+        <Literal xml:lang="en">isCharacterizedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:isDefinedBy</AbbreviatedIRI>
+        <Literal xml:lang="en">isDefinedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:isEvaluatedBy</AbbreviatedIRI>
+        <Literal xml:lang="en">isEvaluatedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:isMeasuredBy</AbbreviatedIRI>
+        <Literal xml:lang="en">isMeasuredBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:isValidatedBy</AbbreviatedIRI>
+        <Literal xml:lang="en">isValidatedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:maxRange</AbbreviatedIRI>
+        <Literal xml:lang="en">maxRange</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:measuredValue</AbbreviatedIRI>
+        <Literal xml:lang="en">measuredValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:minRange</AbbreviatedIRI>
+        <Literal xml:lang="en">minRange</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:modelDescription</AbbreviatedIRI>
+        <Literal xml:lang="en">modelDescription</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:modelName</AbbreviatedIRI>
+        <Literal xml:lang="en">modelName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:models</AbbreviatedIRI>
+        <Literal xml:lang="en">models</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:refreshRate</AbbreviatedIRI>
+        <Literal xml:lang="en">refreshRate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:resTime</AbbreviatedIRI>
+        <Literal xml:lang="en">resTime</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:sensitivityCoefficient</AbbreviatedIRI>
+        <Literal xml:lang="en">sensitivityCoefficient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:stepSize</AbbreviatedIRI>
+        <Literal xml:lang="en">stepSize</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:systemDescription</AbbreviatedIRI>
+        <Literal xml:lang="en">systemDescription</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:systemName</AbbreviatedIRI>
+        <Literal xml:lang="en">systemName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:thresholdValue</AbbreviatedIRI>
+        <Literal xml:lang="en">thresholdValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:totalDelay</AbbreviatedIRI>
+        <Literal xml:lang="en">totalDelay</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:unit</AbbreviatedIRI>
+        <Literal xml:lang="en">unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:variableDescription</AbbreviatedIRI>
+        <Literal xml:lang="en">variableDescription</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>untitled-ontology-17:varialeName</AbbreviatedIRI>
+        <Literal xml:lang="en">varialeName</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
